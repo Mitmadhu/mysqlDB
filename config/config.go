@@ -1,23 +1,29 @@
 package config
 
 import (
+	"fmt"
+
 	"github.com/Mitmadhu/mysqlDB/database"
 	"gorm.io/gorm"
 )
 
 var Cnf = Config{}
 
-var X = 100
-
 type Config struct{
 	 DB *gorm.DB
 }
 
-func GetDB() *gorm.DB{
+func GetDB() *gorm.DB {
+	if Cnf.DB == nil{
+		err := initDB()
+		if err != nil || Cnf.DB == nil{
+			panic(fmt.Sprintf("error while connection to db, err: %v", err))
+		}
+	}
 	return Cnf.DB
 }
 
-func InitConfig() error{
+func initDB()error{
 	// initDB
 	db, err := database.DBFactory("", "")
 	Cnf.DB = db
@@ -25,6 +31,10 @@ func InitConfig() error{
 	if err != nil {
 		return err
 	}
+	return nil
+}
+
+func InitConfig() error{
 	return nil
 }
 
