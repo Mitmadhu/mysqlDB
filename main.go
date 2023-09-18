@@ -1,14 +1,36 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/Mitmadhu/mysqlDB/config"
 	"github.com/Mitmadhu/mysqlDB/database/model"
+	"gorm.io/gorm"
 )
 
-func main(){
-	config.InitConfig()
+type table interface{
+	CreateTable(db *gorm.DB) error
+}
 
-	u := model.User{}
+func migrateTables(){
+	db := config.Cnf.DB
+
+	fmt.Println("Migrating DB...")
+	arr := []table{
+		model.User{},
+		model.Friend{},
+	}
 	
-	u.CreateTable(config.Cnf.DB)
+	for _, t := range arr {
+		err := t.CreateTable(db)
+		if err != nil {
+			panic(fmt.Sprintf("error while creating table, err: %v", err))
+		}
+	}
+	fmt.Println("Migration done!")
+}
+
+func main() {
+	config.InitConfig()
+	migrateTables()
 }
