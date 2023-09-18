@@ -27,11 +27,7 @@ func initDB()error{
 	// initDB
 	db, err := database.DBFactory("", "")
 	Cnf.DB = db
-	
-	if err != nil {
-		return err
-	}
-	return nil
+	return err
 }
 
 func InitConfig() error{
