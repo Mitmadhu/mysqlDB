@@ -1,3 +1,5 @@
+github.com/Mitmadhu/broker v1.0.1-0.20230918164534-0515f7a00bd2 h1:25usgrUUwINVfNGLnlK5hS/UJKuN/WlVsMIprZz5fGw=
+github.com/Mitmadhu/broker v1.0.1-0.20230918164534-0515f7a00bd2/go.mod h1:vWTRqUCjVhdGrHsaYNwdS9GW8odCXXzrhSDocc1X1d4=
 github.com/go-sql-driver/mysql v1.7.0/go.mod h1:OXbVy3sEdcQ2Doequ6Z5BW6fXNQTmx+9S1MCJN5yJMI=
 github.com/go-sql-driver/mysql v1.7.1 h1:lUIinVbN1DY0xBg0eMOzmmtGoHwWBbvnWubQUrtU8EI=
 github.com/go-sql-driver/mysql v1.7.1/go.mod h1:OXbVy3sEdcQ2Doequ6Z5BW6fXNQTmx+9S1MCJN5yJMI=

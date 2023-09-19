@@ -1,3 +1,6 @@
+# github.com/Mitmadhu/broker v1.0.1-0.20230918164534-0515f7a00bd2
+## explicit; go 1.21.1
+github.com/Mitmadhu/broker/constants
 # github.com/go-sql-driver/mysql v1.7.1
 ## explicit; go 1.13
 github.com/go-sql-driver/mysql

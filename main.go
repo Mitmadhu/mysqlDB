@@ -13,7 +13,7 @@ type table interface{
 }
 
 func migrateTables(){
-	db := config.Cnf.DB
+	db := config.GetDB()
 
 	fmt.Println("Migrating DB...")
 	arr := []table{
@@ -32,5 +32,5 @@ func migrateTables(){
 
 func main() {
 	config.InitConfig()
-	migrateTables()
+	// migrateTables()
 }
