@@ -51,6 +51,7 @@ func (u User) GetUserByUsername(username string) (*User, error) {
 		Username: user.Username,
 		Age:      user.Age,
 		Password: user.Password,
+		Salt:     user.Salt,
 	}, nil
 }
 
