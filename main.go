@@ -8,11 +8,11 @@ import (
 	"gorm.io/gorm"
 )
 
-type table interface{
+type table interface {
 	CreateTable(db *gorm.DB) error
 }
 
-func migrateTables(){
+func migrateTables() {
 	db := config.GetDB()
 
 	fmt.Println("Migrating DB...")
@@ -20,7 +20,7 @@ func migrateTables(){
 		model.User{},
 		model.Friend{},
 	}
-	
+
 	for _, t := range arr {
 		err := t.CreateTable(db)
 		if err != nil {
@@ -33,4 +33,17 @@ func migrateTables(){
 func main() {
 	config.InitConfig()
 	// migrateTables()
+	
+
+	// err:= model.User{}.Register("ayush", "123", "a", "v", 2)
+	// if(err != nil){
+	// 	fmt.Println(err.Error())
+	// }
+
+	// b, err := model.User{}.ValidateUser("ayushi", "12345")
+	// if(err != nil){
+	// 	fmt.Println(err.Error())
+	// }
+	// fmt.Println(b)
+
 }

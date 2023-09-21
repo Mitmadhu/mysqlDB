@@ -10,6 +10,10 @@ github.com/jinzhu/inflection
 # github.com/jinzhu/now v1.1.5
 ## explicit; go 1.12
 github.com/jinzhu/now
+# golang.org/x/crypto v0.13.0
+## explicit; go 1.17
+golang.org/x/crypto/bcrypt
+golang.org/x/crypto/blowfish
 # gorm.io/driver/mysql v1.5.1
 ## explicit; go 1.14
 gorm.io/driver/mysql

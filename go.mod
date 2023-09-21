@@ -4,6 +4,7 @@ go 1.21.1
 
 require (
 	github.com/Mitmadhu/broker v1.0.1-0.20230918164534-0515f7a00bd2
+	golang.org/x/crypto v0.13.0
 	gorm.io/driver/mysql v1.5.1
 	gorm.io/gorm v1.25.4
 )
