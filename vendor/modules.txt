@@ -1,9 +1,29 @@
-# github.com/Mitmadhu/broker v1.0.1-0.20230918164534-0515f7a00bd2
+# github.com/Mitmadhu/broker v1.0.1-0.20231125150529-c5950db02c57
 ## explicit; go 1.21.1
+github.com/Mitmadhu/broker/auth/jwt
 github.com/Mitmadhu/broker/constants
+github.com/Mitmadhu/broker/dto/response
+github.com/Mitmadhu/broker/helper
+# github.com/Mitmadhu/commons v0.0.0-20231126123622-b39a6c8b2764
+## explicit; go 1.21.1
+github.com/Mitmadhu/commons/dto/response
+github.com/Mitmadhu/commons/helper
+github.com/Mitmadhu/commons/server
+# github.com/dgrijalva/jwt-go v3.2.0+incompatible
+## explicit
+github.com/dgrijalva/jwt-go
+# github.com/felixge/httpsnoop v1.0.1
+## explicit; go 1.13
+github.com/felixge/httpsnoop
 # github.com/go-sql-driver/mysql v1.7.1
 ## explicit; go 1.13
 github.com/go-sql-driver/mysql
+# github.com/gorilla/handlers v1.5.1
+## explicit; go 1.14
+github.com/gorilla/handlers
+# github.com/gorilla/mux v1.8.0
+## explicit; go 1.12
+github.com/gorilla/mux
 # github.com/jinzhu/inflection v1.0.0
 ## explicit
 github.com/jinzhu/inflection
