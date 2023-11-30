@@ -5,6 +5,7 @@ import (
 
 	"github.com/Mitmadhu/mysqlDB/config"
 	"github.com/Mitmadhu/mysqlDB/database/model"
+	"github.com/Mitmadhu/mysqlDB/server"
 	"gorm.io/gorm"
 )
 
@@ -32,6 +33,7 @@ func migrateTables() {
 
 func main() {
 	config.InitConfig()
+	server.InitRouter()
 	// migrateTables()
 	
 

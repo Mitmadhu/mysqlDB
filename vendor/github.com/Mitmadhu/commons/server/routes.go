@@ -8,7 +8,7 @@ import (
 
 	jwtAuth "github.com/Mitmadhu/broker/auth/jwt"
 	"github.com/Mitmadhu/broker/constants"
-	"github.com/Mitmadhu/broker/helper"
+	"github.com/Mitmadhu/commons/helper"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 )
@@ -35,7 +35,7 @@ func (t Token) HasError(w http.ResponseWriter) bool {
 
 var RouterMap = map[string]RouterRequest{}
 
-func Routers() {
+func Routers(port int) {
 	r := mux.NewRouter()
 	addApis(r)
 
@@ -46,7 +46,6 @@ func Routers() {
 		handlers.AllowedHeaders([]string{"Content-Type", "Authorization"}),           // Adjust the allowed headers
 	)
 
-	port := 8080
 	fmt.Printf("Server is listening on :%d...\n", port)
 	http.Handle("/", corsOptions(r))
 	err := http.ListenAndServe(fmt.Sprintf(":%d", port), nil)

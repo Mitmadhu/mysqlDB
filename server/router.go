@@ -15,8 +15,8 @@ func InitRouter() {
 			DTO: &dto.ValidateUserRequest{},
 			Method: http.MethodPost,
 			Handler: api.ValidateUser,
-			ValidationType: constants.JWTValidation,
+			ValidationType: constants.NoneValidation,
 		},
 	}
-	router.Routers()
+	router.Routers(8081)
 }
