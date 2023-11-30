@@ -14,6 +14,7 @@ type ValidateUserRequest struct {
 }
 
 type ValidateUserResponse struct {
+	BaseResponse
 	IsValid *bool `json:"is_valid"`
 }
 
