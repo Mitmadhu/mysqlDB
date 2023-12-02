@@ -17,6 +17,9 @@ func InitRouter() {
 			Handler:        api.ValidateUser,
 			ValidationType: constants.NoneValidation,
 		},
+		"/register-user" : {
+			DTO : 
+		}
 	}
 	router.Routers(8081)
 }
