@@ -36,7 +36,7 @@ func ValidateUser(w http.ResponseWriter, rawReq interface{}) {
 			StatusCode: http.StatusOK,
 			Success:    true,
 		},
-		IsValid: result,
+		IsValid: &result,
 	}
 	helper.SendSuccessResponse(w, resp, http.StatusOK)
 }
