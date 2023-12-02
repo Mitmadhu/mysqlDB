@@ -1,7 +1,6 @@
 package api
 
 import (
-	"errors"
 	"net/http"
 
 	"github.com/Mitmadhu/broker/constants"
@@ -20,17 +19,24 @@ func ValidateUser(w http.ResponseWriter, rawReq interface{}) {
 	u := model.User{}
 	validated, err := u.ValidateUser(req.Username, req.Password)
 
-	if !validated {
+	if err != nil && err.Error() != constants.UserNotFound{
 		println(err.Error())
-		err = errors.New(constants.UserNotFound)
-	}
-	if err != nil {
-		helper.SendErrorResponse(w, req.MsgID, err.Error(), http.StatusUnauthorized)
+		helper.SendErrorResponse(w, req.MsgID, "", http.StatusInternalServerError)
 		return
 	}
 
 	result := true
-	helper.SendSuccessResponse(w, req.MsgID, dto.ValidateUserResponse{
-		IsValid: &result,
-	}, http.StatusOK)
+	if !validated {
+		result = false
+	}
+
+	resp := dto.ValidateUserResponse{
+		BaseResponse: dto.BaseResponse{
+			MsgID:      req.MsgID,
+			StatusCode: http.StatusOK,
+			Success:    true,
+		},
+		IsValid: result,
+	}
+	helper.SendSuccessResponse(w, resp, http.StatusOK)
 }
