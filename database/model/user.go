@@ -40,7 +40,6 @@ func (u User) GetUserByUsername(username string) (*User, error) {
 	result := db.Where("Username = ?", username).First(&user)
 	if result == nil {
 		return nil, errors.New(constants.StatusInternalServerError)
-		constants.AccessToken
 	}
 	if result.Error == gorm.ErrRecordNotFound {
 		return nil, errors.New(constants.UserNotFound)

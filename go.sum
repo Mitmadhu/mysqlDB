@@ -1,7 +1,7 @@
-github.com/Mitmadhu/broker v1.0.1-0.20231125150529-c5950db02c57 h1:eqsYLabuQfJFlqluHAa7gINeZ+N5LtKFdbSXW231AoA=
-github.com/Mitmadhu/broker v1.0.1-0.20231125150529-c5950db02c57/go.mod h1:yRz8fWGBLvoRDjoFYWqZiQ1rbGskdvy1Lzy3cb26goo=
-github.com/Mitmadhu/commons v0.0.0-20231202044040-74ad5f1b01fb h1:68jy/HcRj8fX72IfJdJ7OMtjO3H/X0vL2y9wqQQOhdo=
-github.com/Mitmadhu/commons v0.0.0-20231202044040-74ad5f1b01fb/go.mod h1:nbgio+4A78jIDY4mvwKDmgZxFoKqlODzNJQhgSaRJDM=
+github.com/Mitmadhu/broker v1.0.1-0.20231202052903-ae0b6830ddb0 h1:AWczk0dd1UEbcMby7npChh8/VsZ4DMCjRja7mDDQCH0=
+github.com/Mitmadhu/broker v1.0.1-0.20231202052903-ae0b6830ddb0/go.mod h1:k+5x4tcd62S9CJoeo4x/rj72YHcZVo/jO3oMrIM0vzU=
+github.com/Mitmadhu/commons v0.0.0-20231202054941-b52135c7f087 h1:B6bx1A3fW2ybITZWkEEqQIK5AXrn1nzT8pIeY1sUHmQ=
+github.com/Mitmadhu/commons v0.0.0-20231202054941-b52135c7f087/go.mod h1:nbgio+4A78jIDY4mvwKDmgZxFoKqlODzNJQhgSaRJDM=
 github.com/dgrijalva/jwt-go v3.2.0+incompatible h1:7qlOGliEKZXTDg6OTjfoBKDXWrumCAMpl/TFQ4/5kLM=
 github.com/dgrijalva/jwt-go v3.2.0+incompatible/go.mod h1:E3ru+11k8xSBh+hMPgOLZmtrrCbhqsmaPHjLKYnJCaQ=
 github.com/felixge/httpsnoop v1.0.1 h1:lvB5Jl89CsZtGIWuTcDM1E/vkVs49/Ml7JJe07l8SPQ=
