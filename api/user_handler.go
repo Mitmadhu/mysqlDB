@@ -40,3 +40,26 @@ func ValidateUser(w http.ResponseWriter, rawReq interface{}) {
 	}
 	helper.SendSuccessResponse(w, resp, http.StatusOK)
 }
+
+func RegisterUser(w http.ResponseWriter, rawReq interface{}){
+	req, ok := rawReq.(*dto.RegisterUserRequest)
+	if(!ok){
+		helper.SendErrorResponse(w, "", "invalid request body", http.StatusBadRequest)
+	}
+
+	// check if user already exist
+	u := model.User{}
+	_ , err := u.GetUserByUsername(req.Username)
+	if (err != nil){
+		if (err.Error() == "user not found"){
+			helper.SendErrorResponse(w, req.MsgID, err.Error(), http.StatusIMUsed)
+		}else {
+			helper.SendErrorResponse(w, req.MsgID, err.Error(), http.StatusInternalServerError)
+		}
+		return
+	}
+
+	// create user if not exist
+	u.Register(req.Username, req.Password, req.FirstName, req.LastName, req.Age)
+
+}
