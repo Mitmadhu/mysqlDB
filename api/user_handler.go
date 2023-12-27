@@ -74,7 +74,7 @@ func RegisterUser(w http.ResponseWriter, rawReq interface{}){
 			MsgID: req.MsgID,
 			Success: true,
 			StatusCode: http.StatusAccepted,
-			Message: constants.UserCreated,
+			Message: "constants.UserCreated",
 		},
 	}, http.StatusAccepted)
 

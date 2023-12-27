@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+// protoc --go_out=$(pwd)/pb --go-grpc_out=$(pwd)/pb --experimental_allow_proto3_optional=true ./proto/validate_user.proto
+
+package proto;
+
+option go_package = "/pb/grpc_user";
+
+service mysql{
+    rpc userExists(validateUserRequest) returns (validateUserResponse);
+}
+
+message validateUserRequest {
+    string msgID = 1;
+    string username = 2;
+    string password = 3;
+    string token = 4;
+}
+
+message validateUserResponse {
+    string msgID   = 1;
+	bool success    = 2; 
+    int32	statusCode = 3;
+	string message     = 4;
+    optional bool isValid = 5;
+}

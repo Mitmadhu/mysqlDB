@@ -10,7 +10,6 @@ const (
 	RefreshToken   = "refreshToken"
 	JWTValidation  = "jwtValidation"
 	NoneValidation = "none"
-	UserCreated = "user created"
 
 	// errors
 	StatusInternalServerError = "internal server error"
