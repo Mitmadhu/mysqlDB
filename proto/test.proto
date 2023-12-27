@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+// protoc --go_out=$(pwd) --go-grpc_out=$(pwd) --experimental_allow_proto3_optional=true ./proto/test.proto
+
+package proto;
+
+option go_package = "/pb/grpc_test";
+
+service test{
+    rpc sayHello(testRequest) returns (testResponse);
+}
+
+message testRequest {
+    string msgID = 1;
+}
+
+message testResponse {
+    string msg = 1;
+}
